@@ -1,0 +1,7 @@
+site_name: Umun Business
+theme:
+  name: 'material'
+  logo: 'resources/logo/logo medium.png'
+  favicon: 'resources/logo/logo.small.png'
+  palette:
+    primary: green
