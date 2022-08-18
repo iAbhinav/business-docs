@@ -20,9 +20,18 @@ jobs:
       with:
         credentials: ${{secrets.GIT_CREDENTIALS}}
     - run: git clone https://github.com/umun-tech/business-docs-site.git
+<<<<<<< HEAD
     - run: python -m mkdocs build
     - run: cd site
     - run: git add .
+=======
+    - run: mv business-docs-site site
+    - run: python -m mkdocs build
+    - run: cd site
+    - run: git add .
+    - run: git config --global user.email "abhisinghal1087@gmail.com"
+    - run: git config --global user.name "Abhinav"
+>>>>>>> 30ba02b55f387829b0dc495b3063808b6e3fc13f
     - run: git commit -m "update"
     - run: git push origin master
 
