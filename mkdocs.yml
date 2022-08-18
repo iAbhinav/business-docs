@@ -5,3 +5,28 @@ theme:
   favicon: 'resources/logo/logo.small.png'
   palette:
     primary: green
+  features:
+  # - navigation.tabs
+  - navigation.expand
+  # - navigation.indexes
+  - toc.integrate
+  icon:
+    repo: 'material/web'
+repo_url: https://business.umun.in
+repo_name: Website
+extra:
+  generator: false
+  homepage: https://business.umun.in
+copyright: Copyright &copy; 2017 - 2022 Umun Tech
+nav:
+- About: index.md
+- User Guide:
+  - हिंदी : 
+    - क्रम सूची  : hindi/readme.md
+    - लॉगिन  : hindi/user/readme.md
+    - आइटम   : hindi/item/readme.md
+    - पार्टी    : hindi/party/readme.md
+    - ऑर्डर     : hindi/order/readme.md
+    - डील      : hindi/deal/readme.md
+    - इन्वॉस       : hindi/invoice/readme.md
+  - English: english/readme.md
