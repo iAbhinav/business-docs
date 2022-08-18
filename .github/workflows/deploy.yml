@@ -12,6 +12,7 @@ jobs:
     - uses: de-vri-es/setup-git-credentials@v2
       with:
         credentials: ${{secrets.GIT_CREDENTIALS}}
+    - run: git checkout https://github.com/umun-tech/business-docs-site.git
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
