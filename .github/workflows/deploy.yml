@@ -9,7 +9,9 @@ jobs:
   deploy_on_github:
     runs-on: ubuntu-latest
     steps:
-    - run:  ls
+    - uses: de-vri-es/setup-git-credentials@v2
+      with:
+        credentials: ${{secrets.GIT_CREDENTIALS}}
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
