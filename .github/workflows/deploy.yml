@@ -1,0 +1,20 @@
+name: Continous Deployment
+
+on:
+  push:
+    branch: [master]
+    
+    
+jobs:
+  deploy_on_github:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+    - run: pip install mkdocs
+    - run: pip install mkdocs-material
+    - run: pip install mkdocs-material-extensions
+    - run: python -m mkdocs build
