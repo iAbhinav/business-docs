@@ -9,10 +9,6 @@ jobs:
   deploy_on_github:
     runs-on: ubuntu-latest
     steps:
-    - uses: de-vri-es/setup-git-credentials@v2
-      with:
-        credentials: ${{secrets.GIT_CREDENTIALS}}
-    - run: git clone https://github.com/umun-tech/business-docs-site.git
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
@@ -20,5 +16,13 @@ jobs:
     - run: pip install mkdocs
     - run: pip install mkdocs-material
     - run: pip install mkdocs-material-extensions
+    - uses: de-vri-es/setup-git-credentials@v2
+      with:
+        credentials: ${{secrets.GIT_CREDENTIALS}}
+    - run: git clone https://github.com/umun-tech/business-docs-site.git
     - run: python -m mkdocs build
+    - run: cd site
+    - run: git add .
+    - run: git commit -m "update"
+    - run: git push origin master
 
