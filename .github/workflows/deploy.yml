@@ -20,6 +20,7 @@ jobs:
       with:
         credentials: ${{secrets.GIT_CREDENTIALS}}
     - run: git clone https://github.com/umun-tech/business-docs-site.git
+    - run: mv business-docs-site site
     - run: python -m mkdocs build
     - run: cd site
     - run: git add .
