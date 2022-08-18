@@ -9,6 +9,7 @@ jobs:
   deploy_on_github:
     runs-on: ubuntu-latest
     steps:
+    - run: yum install git
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
@@ -17,3 +18,4 @@ jobs:
     - run: pip install mkdocs-material
     - run: pip install mkdocs-material-extensions
     - run: python -m mkdocs build
+
