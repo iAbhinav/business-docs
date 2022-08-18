@@ -9,7 +9,7 @@ jobs:
   deploy_on_github:
     runs-on: ubuntu-latest
     steps:
-    - run: yum install git
+    - run:  ls
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
